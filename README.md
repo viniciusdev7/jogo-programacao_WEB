@@ -62,12 +62,12 @@ Não há instalação nem dependências. Baixe o repositório e abra o arquivo
 ```
 
 O conteúdo dos casos fica separado da lógica em `js/casos.js`. Para trocar um
-caso, basta editar esse arquivo — nada na lógica precisa mudar.
+caso, basta editar esse arquivo, nada na lógica precisa mudar.
 
 ## Sobre o conteúdo
 
 Os casos são baseados no arco central da série *The Mentalist* (Bruno Heller, 2008–2015),
-usada aqui como referência narrativa em trabalho acadêmico sem fins comerciais. Os textos
+usada aqui como referência narrativa no trabalho, sem fins comerciais. Os textos
 foram escritos com palavras próprias; nenhum diálogo, imagem ou material original da série
 foi reproduzido. A licença MIT abaixo cobre o código deste repositório.
 

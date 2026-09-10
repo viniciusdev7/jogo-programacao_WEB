@@ -1,9 +1,3 @@
-/* ==========================================================
-   Arquivo Morto — folha de estilo
-   Paleta e tipografia inspiradas em pasta de arquivo policial:
-   papel envelhecido sobre mesa, tinta escura, carimbo vermelho.
-   ========================================================== */
-
 :root {
   --papel:        #ded9c9;
   --papel-claro:  #e9e5d8;
@@ -382,7 +376,6 @@ body {
   .rodape-jogo { text-align: center; }
 }
 
-/* ---------- Acessibilidade: movimento reduzido ---------- */
 @media (prefers-reduced-motion: reduce) {
   .pista { animation: none; }
   .botao, .suspeito { transition: none; }
@@ -404,7 +397,7 @@ body {
   color: var(--tinta-fraca);
 }
 
-/* ---------- Carimbo de spoiler (só na abertura) ---------- */
+/* ---------- Carimbo de spoiler ---------- */
 .spoiler {
   max-width: 30rem;
   margin: 0 0 2.5rem;

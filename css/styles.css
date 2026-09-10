@@ -399,7 +399,37 @@ body {
 
 .capa__premissa {
   max-width: 30rem;
-  margin: -1.5rem 0 3rem;
+  margin: -1.5rem 0 2rem;
   font-size: 1rem;
   color: var(--tinta-fraca);
+}
+
+/* ---------- Carimbo de spoiler (só na abertura) ---------- */
+.spoiler {
+  max-width: 30rem;
+  margin: 0 0 2.5rem;
+  padding: 0.9rem 1.1rem 1rem;
+  border: 2px solid var(--carimbo);
+  background-color: rgba(154, 55, 41, 0.06);
+  transform: rotate(-1.1deg);
+}
+
+.spoiler__selo {
+  font-family: var(--maquina);
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--carimbo);
+  margin: 0 0 0.4rem;
+}
+
+.spoiler__texto {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--tinta);
+}
+
+@media (max-width: 720px) {
+  .spoiler { transform: none; }
 }

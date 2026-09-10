@@ -1,6 +1,4 @@
 /*
-  jogo.js — toda a lógica da partida.
-
   Estado da partida: quatro variáveis controlam tudo.
     casoAtual        -> índice do caso na lista CASOS (0 a 4)
     pistasReveladas  -> quantas pistas extras o jogador pediu neste caso (0 a 3)
@@ -8,7 +6,6 @@
     pontuacao        -> soma dos casos resolvidos
 */
 
-// ---------- Configuração ----------
 const VALORES = [100, 70, 40, 20];   // valor do caso conforme as pistas pedidas
 const CREDIBILIDADE_INICIAL = 3;
 

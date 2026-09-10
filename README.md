@@ -11,7 +11,7 @@ Trabalho da disciplina GAC116 — Programação Web.
 
 Você é um investigador da Divisão de Casos Não Resolvidos. São cinco pastas
 arquivadas, cada uma com um crime e cinco suspeitos. Sua missão é apontar o
-culpado de todas as cinco — e fazer isso com o mínimo de ajuda possível.
+culpado de todas as cinco e fazer isso com o mínimo de ajuda possível.
 
 ## Regras
 

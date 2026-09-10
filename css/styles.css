@@ -1,0 +1,389 @@
+/* ==========================================================
+   Arquivo Morto — folha de estilo
+   Paleta e tipografia inspiradas em pasta de arquivo policial:
+   papel envelhecido sobre mesa, tinta escura, carimbo vermelho.
+   ========================================================== */
+
+:root {
+  --papel:        #ded9c9;
+  --papel-claro:  #e9e5d8;
+  --mesa:         #3f463d;
+  --mesa-escura:  #333930;
+  --tinta:        #24292b;
+  --tinta-fraca:  #626861;
+  --carimbo:      #9a3729;
+  --confirma:     #2f5a4a;
+  --linha:        #b9b3a0;
+
+  --serif: Georgia, "Times New Roman", serif;
+  --maquina: "Courier New", Courier, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--mesa);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.05) 0px,
+      rgba(0,0,0,0.05) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  color: var(--tinta);
+  font-family: var(--serif);
+  line-height: 1.6;
+}
+
+/* ---------- Controle de telas ---------- */
+.tela { display: none; }
+.tela--ativa { display: block; }
+
+/* ---------- Capa (abertura e fim) ---------- */
+.capa {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 4rem 1.75rem 3.5rem;
+  background-color: var(--papel);
+  min-height: 100vh;
+  border-left: 1px solid var(--linha);
+  border-right: 1px solid var(--linha);
+}
+
+.capa__orgao {
+  font-family: var(--maquina);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--tinta-fraca);
+  margin: 0 0 1.5rem;
+}
+
+.capa__titulo {
+  font-size: clamp(3.2rem, 13vw, 5.5rem);
+  line-height: 0.92;
+  font-weight: 400;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.capa__linha {
+  font-size: 1.15rem;
+  color: var(--tinta-fraca);
+  margin: 0 0 3rem;
+  font-style: italic;
+}
+
+.regras {
+  border-top: 2px solid var(--tinta);
+  padding-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 30rem;
+}
+
+.regras h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: var(--maquina);
+  margin: 0 0 1rem;
+}
+
+.regras p {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+}
+
+.fim__pontos {
+  font-size: 2.75rem;
+  font-family: var(--maquina);
+  margin: 0 0 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--tinta);
+}
+
+/* ---------- Botões ---------- */
+.botao {
+  font-family: var(--serif);
+  font-size: 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.7rem 1.4rem;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--carimbo);
+  outline-offset: 2px;
+}
+
+.botao--principal {
+  background-color: var(--tinta);
+  color: var(--papel-claro);
+  border: 1px solid var(--tinta);
+}
+
+.botao--principal:hover { background-color: #000; }
+
+.botao--secundario {
+  background-color: transparent;
+  color: var(--tinta);
+  border: 1px solid var(--tinta);
+}
+
+.botao--secundario:hover:not(:disabled) {
+  background-color: var(--tinta);
+  color: var(--papel-claro);
+}
+
+.botao--secundario:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.botao--fantasma {
+  background: none;
+  border: none;
+  color: var(--papel);
+  text-decoration: underline;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  opacity: 0.7;
+}
+
+.botao--fantasma:hover { opacity: 1; }
+
+/* ---------- Placar ---------- */
+.placar {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--maquina);
+  font-size: 0.85rem;
+  color: var(--papel);
+}
+
+.placar__item { margin: 0; }
+
+.placar__item--credibilidade {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.marca {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid var(--papel);
+  background-color: var(--papel);
+  border-radius: 50%;
+}
+
+.marca--gasta { background-color: transparent; }
+
+/* ---------- Pasta: as duas colunas ---------- */
+.pasta {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0;
+  background-color: var(--papel);
+  border: 1px solid var(--linha);
+}
+
+.dossie {
+  padding: 2.25rem 2rem;
+  border-right: 1px solid var(--linha);
+}
+
+.dossie__numero {
+  font-family: var(--maquina);
+  font-size: 0.8rem;
+  color: var(--carimbo);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.dossie__titulo {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem;
+  line-height: 1.1;
+}
+
+.dossie__local {
+  font-size: 0.95rem;
+  color: var(--tinta-fraca);
+  font-style: italic;
+  margin: 0 0 1.5rem;
+}
+
+.dossie__briefing {
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
+}
+
+/* ---------- Pistas ---------- */
+.pistas { margin-bottom: 1.5rem; }
+
+.pista {
+  border-left: 3px solid var(--carimbo);
+  padding: 0.65rem 0 0.65rem 1rem;
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  background-color: var(--papel-claro);
+  animation: entrada 0.25s ease-out;
+}
+
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.acao-pista {
+  border-top: 1px solid var(--linha);
+  padding-top: 1.25rem;
+}
+
+.acao-pista__valor {
+  font-family: var(--maquina);
+  font-size: 0.85rem;
+  color: var(--tinta-fraca);
+  margin: 0.75rem 0 0;
+}
+
+/* ---------- Suspeitos ---------- */
+.suspeitos { padding: 2.25rem 2rem; }
+
+.suspeitos__titulo {
+  font-family: var(--maquina);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0 0 1.25rem;
+  color: var(--tinta-fraca);
+}
+
+.suspeitos__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suspeitos__lista li { margin-bottom: 0.6rem; }
+
+.suspeito {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background-color: var(--papel-claro);
+  border: 1px solid var(--linha);
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-family: var(--serif);
+  color: var(--tinta);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.suspeito:hover:not(:disabled) {
+  border-color: var(--tinta);
+  background-color: #f2eee2;
+}
+
+.suspeito:focus-visible {
+  outline: 3px solid var(--carimbo);
+  outline-offset: 2px;
+}
+
+.suspeito__nome {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+}
+
+.suspeito__papel {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--tinta-fraca);
+  line-height: 1.45;
+}
+
+.suspeito--queimado {
+  cursor: not-allowed;
+  opacity: 0.45;
+  text-decoration: line-through;
+  text-decoration-color: var(--carimbo);
+  text-decoration-thickness: 2px;
+}
+
+.suspeito:disabled { cursor: not-allowed; }
+
+/* ---------- Aviso de acerto / erro ---------- */
+.aviso {
+  display: none;
+  max-width: 60rem;
+  margin: 1.25rem auto 0;
+  padding: 1.5rem 2rem;
+  background-color: var(--papel-claro);
+  border-left: 6px solid var(--tinta);
+}
+
+.aviso--visivel { display: block; }
+
+.aviso--acerto { border-left-color: var(--confirma); }
+.aviso--erro   { border-left-color: var(--carimbo); }
+
+.aviso__titulo {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.aviso__texto {
+  margin: 0 0 1.25rem;
+  max-width: 44rem;
+}
+
+.aviso--erro .aviso__texto { margin-bottom: 0; }
+
+/* ---------- Rodapé do jogo ---------- */
+.rodape-jogo {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 3rem;
+  text-align: right;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 720px) {
+  .pasta {
+    grid-template-columns: 1fr;
+  }
+
+  .dossie {
+    border-right: none;
+    border-bottom: 1px solid var(--linha);
+    padding: 1.75rem 1.25rem;
+  }
+
+  .suspeitos { padding: 1.75rem 1.25rem; }
+
+  .capa { padding: 2.5rem 1.25rem 3rem; }
+
+  .aviso { padding: 1.25rem; }
+
+  .rodape-jogo { text-align: center; }
+}
+
+/* ---------- Acessibilidade: movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .pista { animation: none; }
+  .botao, .suspeito { transition: none; }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquivo Morto — jogo de dedução</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- ===== TELA 1: ABERTURA ===== -->
+  <section class="tela tela--ativa" id="tela-inicio">
+    <div class="capa">
+      <p class="capa__orgao">Divisão de Casos Não Resolvidos</p>
+      <h1 class="capa__titulo">Arquivo<br>Morto</h1>
+      <p class="capa__linha">Cinco pastas. Cinco culpados. Três chances.</p>
+
+      <div class="regras">
+        <h2>Como se joga</h2>
+        <p>Cada pasta traz um crime e cinco suspeitos. Você acusa quando quiser.</p>
+        <p>Acusar cedo vale mais. Cada pista que você pede derruba o valor do caso:
+          <strong>100</strong> sem pistas extras, depois <strong>70</strong>, <strong>40</strong> e <strong>20</strong>.</p>
+        <p>Errar não encerra a pasta — custa uma das suas três credibilidades e queima o suspeito.
+          Zerou a credibilidade, você sai do caso.</p>
+      </div>
+
+      <button class="botao botao--principal" id="btn-comecar">Abrir a primeira pasta</button>
+    </div>
+  </section>
+
+  <!-- ===== TELA 2: JOGO ===== -->
+  <section class="tela" id="tela-jogo">
+
+    <header class="placar">
+      <p class="placar__item">Pasta <span id="placar-caso">1</span> de <span id="placar-total">5</span></p>
+      <p class="placar__item placar__item--credibilidade">
+        Credibilidade <span id="placar-credibilidade" aria-label="credibilidade restante"></span>
+      </p>
+      <p class="placar__item">Pontos <span id="placar-pontos">0</span></p>
+    </header>
+
+    <div class="pasta">
+
+      <!-- Coluna esquerda: o caso -->
+      <div class="dossie">
+        <p class="dossie__numero" id="caso-numero">Pasta 01</p>
+        <h2 class="dossie__titulo" id="caso-titulo"></h2>
+        <p class="dossie__local" id="caso-local"></p>
+        <p class="dossie__briefing" id="caso-briefing"></p>
+
+        <div class="pistas" id="pistas"></div>
+
+        <div class="acao-pista">
+          <button class="botao botao--secundario" id="btn-pista">Pedir mais uma pista</button>
+          <p class="acao-pista__valor">Este caso vale <strong id="valor-atual">100</strong> pontos</p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: suspeitos -->
+      <div class="suspeitos">
+        <h3 class="suspeitos__titulo">Quem você acusa?</h3>
+        <ul class="suspeitos__lista" id="lista-suspeitos"></ul>
+      </div>
+
+    </div>
+
+    <!-- Feedback de acerto/erro -->
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+    <div class="rodape-jogo">
+      <button class="botao botao--fantasma" id="btn-reiniciar-jogo">Recomeçar do zero</button>
+    </div>
+  </section>
+
+  <!-- ===== TELA 3: FIM DE JOGO ===== -->
+  <section class="tela" id="tela-fim">
+    <div class="capa">
+      <p class="capa__orgao" id="fim-selo">Caso encerrado</p>
+      <h1 class="capa__titulo" id="fim-titulo"></h1>
+      <p class="capa__linha" id="fim-texto"></p>
+      <p class="fim__pontos"><span id="fim-pontos">0</span> pontos</p>
+      <button class="botao botao--principal" id="btn-reiniciar-fim">Jogar de novo</button>
+    </div>
+  </section>
+
+  <script src="js/casos.js"></script>
+  <script src="js/jogo.js"></script>
+</body>
+</html>

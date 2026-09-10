@@ -1,13 +1,4 @@
 /*
-  casos.js — todo o conteúdo do jogo mora aqui.
-
-  Casos inspirados no arco central da série "O Mentalista" (The Mentalist),
-  de Bruno Heller. Os textos foram escritos com palavras próprias; nenhum
-  diálogo, imagem ou material original da série foi reproduzido.
-
-  ATENÇÃO: os textos revelam o desfecho do arco. O aviso de spoiler fica
-  na tela de abertura (index.html).
-
   Formato de cada caso:
   {
     titulo, local, briefing,

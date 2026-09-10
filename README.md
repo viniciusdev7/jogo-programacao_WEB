@@ -3,7 +3,7 @@
 Jogo de dedução para navegador, feito com HTML, CSS e JavaScript puro.
 Trabalho da disciplina GAC116 — Programação Web.
 
-**Jogar:** https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/
+**Jogar:** https://viniciusdev7.github.io/jogo-programacao_WEB/
 
 ---
 
@@ -41,16 +41,11 @@ A partida pode ser reiniciada a qualquer momento pelo botão "Recomeçar do zero
 Não há instalação nem dependências. Baixe o repositório e abra o arquivo
 `index.html` em qualquer navegador.
 
-```
-git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
-cd NOME-DO-REPOSITORIO
-```
-
 ## Tecnologias utilizadas
 
 - HTML5 — estruturação semântica das três telas do jogo
 - CSS3 — Grid, Flexbox, variáveis CSS, layout responsivo
-- JavaScript (ES6, sem bibliotecas) — manipulação do DOM, tratamento de eventos
+- JavaScript (sem bibliotecas) — manipulação do DOM, tratamento de eventos
   e controle do estado da partida
 
 ## Estrutura do projeto
@@ -58,7 +53,7 @@ cd NOME-DO-REPOSITORIO
 ```
 ├── index.html          Estrutura das telas: abertura, jogo e fim
 ├── css/
-│   └── estilo.css      Identidade visual
+│   └── styles.css      Estilização
 ├── js/
 │   ├── casos.js        Conteúdo dos cinco casos
 │   └── jogo.js         Lógica: estado, pontuação, credibilidade
@@ -85,8 +80,8 @@ MIT. Veja o arquivo [LICENSE](LICENSE).
 ```json
 {
 "nome": "Arquivo Morto",
-"descricao": "Jogo de dedução em cinco casos inspirados no arco Red John, da série The Mentalist. Aponte o culpado com o mínimo de pistas: quanto antes você acusa, mais vale. Três erros e você sai da investigação.",
-"autores": "SEU NOME COMPLETO",
-"turma": "SUA TURMA",
+"descricao": "Jogo de dedução dos casos principais da série The Mentalist. Aponte o culpado com o mínimo de pistas: quanto antes você acusa, mais vale. Três erros e você sai da investigação.",
+"autores": "Vinícius Ferreira Oliveira",
+"turma": "14A",
 }
 ```

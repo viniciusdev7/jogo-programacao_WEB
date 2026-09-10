@@ -1,12 +1,12 @@
 /*
-  Estado da partida: quatro variáveis controlam tudo.
+  Quatro variáveis controlam tudo
     casoAtual        -> índice do caso na lista CASOS (0 a 4)
     pistasReveladas  -> quantas pistas extras o jogador pediu neste caso (0 a 3)
     credibilidade    -> começa em 3, cai a cada acusação errada
     pontuacao        -> soma dos casos resolvidos
 */
 
-const VALORES = [100, 70, 40, 20];   // valor do caso conforme as pistas pedidas
+const VALORES = [100, 70, 40, 20];
 const CREDIBILIDADE_INICIAL = 3;
 
 // ---------- Estado ----------
@@ -14,8 +14,8 @@ let casoAtual = 0;
 let pistasReveladas = 0;
 let credibilidade = CREDIBILIDADE_INICIAL;
 let pontuacao = 0;
-let suspeitosQueimados = [];   // nomes já acusados sem sucesso neste caso
-let travado = false;           // trava os cliques enquanto mostra o resultado
+let suspeitosQueimados = [];   
+let travado = false;           
 
 // ---------- Atalhos para elementos ----------
 const $ = (id) => document.getElementById(id);
@@ -189,7 +189,6 @@ function atualizarPlacar() {
   $("placar-pontos").textContent = pontuacao;
   $("valor-atual").textContent = VALORES[pistasReveladas];
 
-  // credibilidade desenhada como marcas: cheias e gastas
   let marcas = "";
   for (let i = 0; i < CREDIBILIDADE_INICIAL; i++) {
     marcas += i < credibilidade

@@ -387,3 +387,19 @@ body {
   .pista { animation: none; }
   .botao, .suspeito { transition: none; }
 }
+
+.aviso__arco {
+  border-top: 1px solid var(--linha);
+  margin: 0 0 1.25rem;
+  padding-top: 1rem;
+  max-width: 44rem;
+  font-style: italic;
+  color: var(--carimbo);
+}
+
+.capa__premissa {
+  max-width: 30rem;
+  margin: -1.5rem 0 3rem;
+  font-size: 1rem;
+  color: var(--tinta-fraca);
+}

@@ -69,6 +69,13 @@ cd NOME-DO-REPOSITORIO
 O conteúdo dos casos fica separado da lógica em `js/casos.js`. Para trocar um
 caso, basta editar esse arquivo — nada na lógica precisa mudar.
 
+## Sobre o conteúdo
+
+Os casos são baseados no arco central da série *The Mentalist* (Bruno Heller, 2008–2015),
+usada aqui como referência narrativa em trabalho acadêmico sem fins comerciais. Os textos
+foram escritos com palavras próprias; nenhum diálogo, imagem ou material original da série
+foi reproduzido. A licença MIT abaixo cobre o código deste repositório.
+
 ## Licença
 
 MIT. Veja o arquivo [LICENSE](LICENSE).
@@ -78,7 +85,7 @@ MIT. Veja o arquivo [LICENSE](LICENSE).
 ```json
 {
 "nome": "Arquivo Morto",
-"descricao": "Jogo de dedução em cinco casos. Aponte o culpado usando o mínimo de pistas: quanto antes você acusa, mais pontos ganha. Três acusações erradas e você é afastado da investigação.",
+"descricao": "Jogo de dedução em cinco casos inspirados no arco Red John, da série The Mentalist. Aponte o culpado com o mínimo de pistas: quanto antes você acusa, mais vale. Três erros e você sai da investigação.",
 "autores": "SEU NOME COMPLETO",
 "turma": "SUA TURMA",
 }

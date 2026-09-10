@@ -125,10 +125,11 @@ function acusar(nome) {
 
     mostrarAviso(
       "acerto",
-      "É ele. +" + ganho + " pontos.",
+      "Confirmado. +" + ganho + " pontos.",
       CASOS[casoAtual].solucao,
       casoAtual + 1 < CASOS.length ? "Próxima pasta" : "Ver resultado final",
-      proximoCaso
+      proximoCaso,
+      CASOS[casoAtual].arco
     );
   } else {
     credibilidade--;
@@ -162,12 +163,17 @@ function proximoCaso() {
 }
 
 // ---------- Aviso de acerto/erro ----------
-function mostrarAviso(tipo, titulo, texto, rotuloBotao, aoClicar) {
+function mostrarAviso(tipo, titulo, texto, rotuloBotao, aoClicar, arco) {
   const aviso = $("aviso");
   aviso.className = "aviso aviso--visivel aviso--" + tipo;
   aviso.innerHTML =
     '<p class="aviso__titulo">' + titulo + "</p>" +
     '<p class="aviso__texto">' + texto + "</p>";
+
+  // o fio que liga os cinco casos, quando o caso tiver um
+  if (arco) {
+    aviso.innerHTML += '<p class="aviso__arco">' + arco + "</p>";
+  }
 
   if (rotuloBotao) {
     const botao = document.createElement("button");
